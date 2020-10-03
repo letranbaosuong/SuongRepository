@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocketIO</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io('http://localhost:3000/')
+
+        var str = '{ "userId" : "wgpcYpFPDXNDKdWkQz9xJMDR9Vv2" , "deviceId" : "06948690-fe4f-11ea-8805-653f836a6216" }'
+        var obj = JSON.parse(str)
+
+        socket.emit("DataObj", str)
+    </script>
+</head>
+
+<body>
+    Hello world
+</body>
+
+</html>
